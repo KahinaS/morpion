@@ -1,13 +1,146 @@
-<!Doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>Morpion</title>
-  <link rel="stylesheet" href="style.css">
+<!doctype html>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <title>Morpion</title>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        .carre {
+            width: 150px;
+            height: 150px;
+        }
+
+        #titre {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            text-align: center;
+            width: 100%;
+            display: block;
+            font-family: 'Lobster', cursive;
+            font-size: 80px;
+            padding-top: 20px;
+            color: black;
+        }
+
+        #Zonea1 {
+            border-right: solid 10px rgb(111, 91, 133);
+            border-bottom: solid 10px rgb(111, 91, 133);
+        }
+
+        #Zonea2 {
+            border-right: solid 10px rgb(111, 91, 133);
+            border-bottom: solid 10px rgb(111, 91, 133);
+            border-left: solid 10px rgb(111, 91, 133);
+            background-position: center;
+            /* ligne à supprimer */
+        }
+
+        #Zonea3 {
+            border-bottom: solid 10px rgb(111, 91, 133);
+            border-left: solid 10px rgb(111, 91, 133);
+            background-position: right;
+            /* ligne à supprimer */
+        }
+
+        #Zoneb1 {
+            border-right: solid 10px rgb(111, 91, 133);
+            border-bottom: solid 10px rgb(111, 91, 133);
+            border-top: solid 10px rgb(111, 91, 133);
+        }
+
+        #Zoneb2 {
+            border: solid 10px rgb(111, 91, 133);
+
+        }
+
+        #Zoneb3 {
+            border-left: solid 10px rgb(111, 91, 133);
+            border-bottom: solid 10px rgb(111, 91, 133);
+            border-top: solid 10px rgb(111, 91, 133);
+        }
+
+        #Zonec1 {
+            border-right: solid 10px rgb(111, 91, 133);
+            border-top: solid 10px rgb(111, 91, 133);
+        }
+
+        #Zonec2 {
+            border-right: solid 10px rgb(111, 91, 133);
+            border-left: solid 10px rgb(111, 91, 133);
+            border-top: solid 10px rgb(111, 91, 133);
+
+        }
+
+        #Zonec3 {
+            border-left: solid 10px rgb(111, 91, 133);
+            border-top: solid 10px rgb(111, 91, 133);
+        }
+
+        .jeu {
+            margin-top: 200px;
+            text-align: center;
+        }
+
+        #center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #rejouer {
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            text-align: center;
+            width: 100%;
+            display: block;
+        }
+
+        .bouton {
+            margin-bottom: 20px;
+            padding: 2%;
+            font-family: 'Lobster', cursive;
+            font-size: 80px;
+            background-color: rgb(201, 115, 201);
+            border-radius: 20px;
+            border: none;
+
+        }
+    </style>
 </head>
-<body>
+
+<body onload="Initialisation()">
+    <div id="titre">Le morpion du bon bail</div>
+    <div class="jeu">
+        <table id="center">
+            <tr>
+                <td class="carre" id="Zonea1" onclick="jouer('Zonea1');">&nbsp;</td>
+                <td class="carre" id="Zonea2" onclick="jouer('Zonea2');">&nbsp;&nbsp;</td>
+                <td class="carre" id="Zonea3" onclick="jouer('Zonea3');">&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="carre" id="Zoneb1" onclick="jouer('Zoneb1');">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td class="carre" id="Zoneb2" onclick="jouer('Zoneb2');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td class="carre" id="Zoneb3" onclick="jouer('Zoneb3');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="carre" id="Zonec1" onclick="jouer('Zonec1');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td class="carre" id="Zonec2" onclick="jouer('Zonec2');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td class="carre" id="Zonec3" onclick="jouer('Zonec3');">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+        </table>
+        <div id="rejouer">
+            <button type="button" class="bouton" onclick="Initialisation()">Rejouer</button>
+        </div>
+    </div>
     <script src="morpion.js"></script>
-    <canvas id="canvasMorpion" width="500" height="500" style="background-color:black;"></canvas>
 </body>
+
 </html>
