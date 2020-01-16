@@ -6,6 +6,7 @@
     <title>Morpion</title>
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <style>
+
         table {
             border-collapse: collapse;
         }
@@ -23,61 +24,62 @@
             width: 100%;
             display: block;
             font-family: 'Lobster', cursive;
-            font-size: 80px;
-            padding-top: 20px;
-            color: black;
+            font-size: 150px;
+            padding-top: 5px;
+            color: rgb(111, 91, 133) ;
+            border-style: groove;
         }
 
-        #Zonea1 {
+        #x1y1 {
             border-right: solid 10px rgb(111, 91, 133);
             border-bottom: solid 10px rgb(111, 91, 133);
         }
 
-        #Zonea2 {
+        #x1y2 {
             border-right: solid 10px rgb(111, 91, 133);
             border-bottom: solid 10px rgb(111, 91, 133);
             border-left: solid 10px rgb(111, 91, 133);
             background-position: center;
-            /* ligne à supprimer */
+           
         }
 
-        #Zonea3 {
+        #x1y3 {
             border-bottom: solid 10px rgb(111, 91, 133);
             border-left: solid 10px rgb(111, 91, 133);
             background-position: right;
-            /* ligne à supprimer */
+           
         }
 
-        #Zoneb1 {
+        #x2y1 {
             border-right: solid 10px rgb(111, 91, 133);
             border-bottom: solid 10px rgb(111, 91, 133);
             border-top: solid 10px rgb(111, 91, 133);
         }
 
-        #Zoneb2 {
+        #x2y2 {
             border: solid 10px rgb(111, 91, 133);
 
         }
 
-        #Zoneb3 {
+        #x2y3 {
             border-left: solid 10px rgb(111, 91, 133);
             border-bottom: solid 10px rgb(111, 91, 133);
             border-top: solid 10px rgb(111, 91, 133);
         }
 
-        #Zonec1 {
+        #x3y1 {
             border-right: solid 10px rgb(111, 91, 133);
             border-top: solid 10px rgb(111, 91, 133);
         }
 
-        #Zonec2 {
+        #x3y2 {
             border-right: solid 10px rgb(111, 91, 133);
             border-left: solid 10px rgb(111, 91, 133);
             border-top: solid 10px rgb(111, 91, 133);
 
         }
 
-        #Zonec3 {
+        #x3y3 {
             border-left: solid 10px rgb(111, 91, 133);
             border-top: solid 10px rgb(111, 91, 133);
         }
@@ -106,7 +108,7 @@
             padding: 2%;
             font-family: 'Lobster', cursive;
             font-size: 80px;
-            background-color: rgb(201, 115, 201);
+            background-color: rgb(111, 91, 133);
             border-radius: 20px;
             border: none;
 
@@ -115,24 +117,23 @@
 </head>
 
 <body onload="Initialisation()">
-    <div id="titre">Le morpion du bon bail</div>
+    <div id="titre"> Morpion  </div>
     <div class="jeu">
         <table id="center">
             <tr>
-                <td class="carre" id="Zonea1" onclick="jouer('Zonea1');">&nbsp;</td>
-                <td class="carre" id="Zonea2" onclick="jouer('Zonea2');">&nbsp;&nbsp;</td>
-                <td class="carre" id="Zonea3" onclick="jouer('Zonea3');">&nbsp;&nbsp;&nbsp;</td>
+                <td class="carre" id="x1y1" onclick="jouer('x1y1');">&nbsp;</td>
+                <td class="carre" id="x1y2" onclick="jouer('x1y2');">&nbsp;&nbsp;</td>
+                <td class="carre" id="x1y3" onclick="jouer('x1y3');">&nbsp;&nbsp;&nbsp;</td>
             </tr>
             <tr>
-                <td class="carre" id="Zoneb1" onclick="jouer('Zoneb1');">&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td class="carre" id="Zoneb2" onclick="jouer('Zoneb2');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td class="carre" id="Zoneb3" onclick="jouer('Zoneb3');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td class="carre" id="x2y1" onclick="jouer('x2y1');">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td class="carre" id="x2y2" onclick="jouer('x2y2');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td class="carre" id="x2y3" onclick="jouer('x2y3');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
             </tr>
             <tr>
-                <td class="carre" id="Zonec1" onclick="jouer('Zonec1');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td class="carre" id="Zonec2" onclick="jouer('Zonec2');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </td>
-                <td class="carre" id="Zonec3" onclick="jouer('Zonec3');">
+                <td class="carre" id="x3y1" onclick="jouer('x3y1');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td class="carre" id="x3y2" onclick="jouer('x3y2');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td class="carre" id="x3y3" onclick="jouer('x3y3');">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
             </tr>
         </table>
